@@ -16,7 +16,7 @@ namespace StackAndQueueProblems
             this.top = null;
 
         }
-        public void push(int data)
+        public void Push(int data)
         {
             Node node = new Node(data);
             if (top == null)
@@ -33,11 +33,42 @@ namespace StackAndQueueProblems
         }
         public void Display()
         {
-            Node temp = this.top;
-            while (temp != null)
+            if (top == null)
             {
-                Console.WriteLine(temp.data + " ");
-                temp = temp.next;
+                Console.WriteLine("Stack is Empty");
+            }
+            else
+            {
+                Node temp = this.top;
+                while (temp != null)
+                {
+                    Console.WriteLine("| "+temp.data + " |");
+                    temp = temp.next;
+                }
+            }
+        }
+        public void Peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("stack is emmpty");
+
+            }
+            else
+            {
+                Console.WriteLine("{0} is in the top stack ", top.data);
+            }
+        }
+        public void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("stack is empty deletion is not possible");
+            }
+            else
+            {
+                Console.WriteLine("Value popped is {0}", top.data);
+                top = top.next;
             }
         }
     }
