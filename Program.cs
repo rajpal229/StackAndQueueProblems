@@ -49,6 +49,11 @@
                     queue.Enqueue(70);
                     Console.WriteLine("Printing Queue");
                     queue.Display();
+
+                    Console.WriteLine("Using Dequeue");
+                    queue.Dequeue();
+                    Console.WriteLine("Printing Remaining Queue");
+                    queue.Display();
                     break;
                 default:
                     Console.WriteLine("Enter Valid option");

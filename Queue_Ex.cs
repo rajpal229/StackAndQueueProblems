@@ -20,8 +20,8 @@ namespace StackAndQueueProblems
             }
             else
             {
-                rear.next = node;
-                rear = rear.next;
+                rear.Next = node;
+                rear = rear.Next;
             }
         }
         public void Display()
@@ -35,8 +35,17 @@ namespace StackAndQueueProblems
             while (temp != null)
             {
                 Console.WriteLine("| " + temp.data + " |");
-                temp = temp.next;
+                temp = temp.Next;
             }
+        }
+        public void Dequeue()
+        {
+            if (front == null)
+            {
+                Console.WriteLine("Queue is Empty");
+            }
+            Console.WriteLine("{0} elment dequeue", front.data);
+            front = front.Next;
         }
     }
 }
