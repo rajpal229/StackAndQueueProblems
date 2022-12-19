@@ -14,7 +14,6 @@ namespace StackAndQueueProblems
         {
             this.data = data;
             next = null;
-
         }
     }
 }
