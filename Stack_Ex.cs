@@ -21,14 +21,14 @@ namespace StackAndQueueProblems
             Node node = new Node(data);
             if (top == null)
             {
-                node.next = null;
+                node.Next = null;
             }
             else
             {
-                node.next = this.top;
+                node.Next = this.top;
             }
             this.top = node;
-            Console.WriteLine("{0} pushed to stack", data);
+            Console.WriteLine("{0} Added to stack", data);
 
         }
         public void Display()
@@ -43,7 +43,7 @@ namespace StackAndQueueProblems
                 while (temp != null)
                 {
                     Console.WriteLine("| "+temp.data + " |");
-                    temp = temp.next;
+                    temp = temp.Next;
                 }
             }
         }
@@ -68,7 +68,7 @@ namespace StackAndQueueProblems
             else
             {
                 Console.WriteLine("Value popped is {0}", top.data);
-                top = top.next;
+                top = top.Next;
             }
         }
     }
